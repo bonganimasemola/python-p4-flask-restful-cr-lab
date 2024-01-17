@@ -3,6 +3,8 @@
 from app import app
 from models import db, Plant
 
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///plants.db'
+
 with app.app_context():
 
     Plant.query.delete()
