@@ -51,7 +51,7 @@ class Plants(Resource):
         db.session.add(new_plant)
         db.session.commit()
 
-        response_dict = new_plant.to_dict()  # Fix the typo here
+        response_dict = new_plant.to_dict()  
 
         response = make_response(jsonify(response_dict), 201)
 
